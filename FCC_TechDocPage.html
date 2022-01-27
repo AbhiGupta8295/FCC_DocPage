@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>C documentation page</title>
+    <style media="screen">
+
+nav{
+  left:-5px;
+  top:1.5rem;
+  padding-right: 0;
+  border-right: solid;
+      border-right-width: initial;
+      border-right-style: solid;
+      border-right-color: rgba(0, 22, 22, 0.4);
+      max-width: 330px;
+      margin-left: -2.5rem;
+      margin-top: -2rem;
+    position: fixed;
+
+    }
+.nav-link{
+  display:block;
+  text-decoration:none;
+  color:#696969;
+  margin-top:5px;
+  top:0px;
+}
+ul{
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+li{
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+  left:0px;
+  padding-left: 2.5rem;
+}
+.uline{
+  border-top: 1px solid black;
+}
+p{
+  padding-left: 3rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2rem;
+    text-decoration: none;
+    ;
+}
+a{
+ color:blue;
+}
+a:hover{
+color:purple;
+}
+header{
+  text-decoration: underline;
+  font-size: 2rem;
+  font weight:bold;
+}
+#main-doc{
+  position:relative;
+  margin-left: 280px;
+  margin-right: 2rem;
+}
+.list_style{
+  list-style-type:square;
+}
+#Introduction{
+
+}
+#C_Language{
+
+}
+#Hello_world{
+
+}
+#Variables{
+
+}
+#Declaring_variables{
+
+}
+#Variable_scope{
+
+}
+#Global_variables{
+
+}
+#Constants{
+
+}
+#Data_types{
+
+}
+#if_else_statement{
+
+}
+#while_statement{
+
+}
+#Function_declarations{
+
+}
+#Reference{
+
+}
+.main-section{
+margin-top: 2rem;
+}
+.code_part{
+  background-color: rgba(0, 22, 22, 0.2);
+  background-size:contain;
+  padding: 8px 0 8px 0;
+  margin-left:3rem;
+  line-height:1.5rem;
+  font-size: 1.2rem;
+}
+  </style>
+  </head>
+  <body>
+
+  <nav>
+    <p style="font-size:2rem">C Language</p>
+    <ul>
+        <li class="uline"><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li class="uline"><a class="nav-link" href="#Hello_world">Hello world</a></li>
+        <li class="uline"><a class="nav-link" href="#Variables">Variables</a></li>
+        <li class="uline">
+          <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+        </li>
+        <li class="uline"><a class="nav-link" href="#Variabe_scope">Variable scope</a></li>
+        <li class="uline"><a class="nav-link" href="#Global_variables">Global variables</a></li>
+        <li class="uline"><a class="nav-link" href="#Constants">Constants</a></li>
+        <li class="uline"><a class="nav-link" href="#Data_types">Data types</a></li>
+        <li class="uline">
+          <a class="nav-link" href="#if...else_statement">if...else statement</a>
+        </li>
+        <li class="uline"><a class="nav-link" href="#while_statement">while statement</a></li>
+        <li class="uline">
+          <a class="nav-link" href="#Function_declarations">Function declarations</a>
+        </li>
+        <li class="uline"><a class="nav-link" href="#Reference" >Reference</a></li>
+      </ul>
+  </nav>
+<main id="main-doc">
+<section class="main-section" id="Introduction">
+<header>Introduction</header>
+<article>
+  <p>C is a procedural programming language. It was initially developed by Dennis
+    Ritchie in the year 1972. It was mainly developed as a system programming language
+     to write an operating system. The main features of the C language include low
+     -level memory access, a simple set of keywords, and a clean style, these features
+      make C language suitable for system programmings like an operating system or
+       compiler development.</p><p>
+Many later languages have borrowed syntax/features directly or indirectly from the
+ C language. Like syntax of Java, PHP, JavaScript, and many other languages are mainly
+  based on the C language. C++ is nearly a superset of C language (Few programs may
+   compile in C, but not in C++).
+</p>
+</article>
+</section>
+
+<section class="main-section" id="Hello_world">
+  <header>Hello World</header>
+    <article>
+      <p>
+Program to Display "Hello, World!"</p><br>
+<section class="code_part">
+#include  &lt;stdio.h&gt<br>
+int main() {<br>
+   // printf() displays the string inside quotation<br>
+   printf("Hello, World!");<br>
+   return 0;<br>
+}<br>
+Output<br>
+Hello, World!<br>
+How "Hello, World!" program works?<br>
+</section>
+<ul class="list_style" style="font-size:1.2rem">
+<li>The #include is a preprocessor command that tells the compiler to include the contents of stdio.h (standard input and output) file in the program.
+</li><li>The stdio.h file contains functions such as scanf() and printf() to take input and display output respectively.
+</li><li>If you use the printf() function without writing #include <stdio.h>, the program will not compile.
+</li><li>The execution of a C program starts from the main() function.
+</li><li>printf() is a library function to send formatted output to the screen. In this program, printf() displays Hello, World! text on the screen.
+</li><li>The return 0; statement is the "Exit status" of the program. In simple terms, the program ends with this statement.
+</li>
+</ul>
+</article>
+</section>
+
+<section class="main-section" id="Variables">
+  <article>
+    <header>Variables</header>
+    <p>A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows-</p>
+      <section class="code_part">type variable_list;</section>
+<p>Here, type must be a valid C data type including char, w_char, int, float, double, bool, or any user-defined object; and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here −
+</p>
+<section class="code_part">
+
+int    i, j, k;<br>
+char   c, ch;<br>
+float  f, salary;<br>
+double d;<br>
+
+</section>
+<p>
+The line int i, j, k; declares and defines the variables i, j, and k; which instruct the compiler to create variables named i, j and k of type int.
+</p>
+  </article>
+</section>
+
+<section class="main-section" id="Declaring_variables">
+  <article>
+    <header>Variable Declaration</header>
+    <p>
+      A variable declaration provides assurance to the compiler that there exists a variable with the given type and name so that the compiler can proceed for further compilation without requiring the complete detail about the variable. A variable definition has its meaning at the time of compilation only, the compiler needs actual variable definition at the time of linking the program.
+</p><p>
+A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use the keyword extern to declare a variable at any place. Though you can declare a variable multiple times in your C program, it can be defined only once in a file, a function, or a block of code.
+    </p>
+  </article>
+</section>
+
+
+<section class="main-section" id="Variable_scope">
+  <article>
+    <header>Variable Scope </header>
+    <p>
+      Variables that are declared inside a function or block are called local variables. They can be used only by statements that are inside that function or block of code. Local variables are not known to functions outside their own. The following example shows how local variables are used. Here all the variables a, b, and c are local to main() function.
+<section class="code_part">
+#include &lt;stdio.h&gt<br>
+int main () {<br>
+  /* local variable declaration */<br>
+  int a, b;<br>
+  int c;<br>
+  /* actual initialization */<br>
+  a = 10;<br>
+  b = 20;<br>
+  c = a + b;<br>
+  printf ("value of a = %d, b = %d and c = %d\n", a, b, c);<br>
+  return 0;<br>
+}<br>
+</section>
+    </p>
+  </article>
+</section>
+
+<section class="main-section" id="Global_variables">
+  <article>
+    <header>Global Variables </header>
+    <p>Global variables are defined outside a function, usually on top of the program. Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program.
+A global variable can be accessed by any function. That is, a global variable is available for use throughout your entire program after its declaration. The following program show how global variables are used in a program.
+<section class="code_part">
+#include &lt;stdio.h&gt
+
+/* global variable declaration */<br>
+int g;<br>
+int main () {<br>
+
+  /* local variable declaration */<br>
+  int a, b;<br>
+  /* actual initialization */<br>
+  a = 10;<br>
+  b = 20;<br>
+  g = a + b;<br>
+  printf ("value of a = %d, b = %d and g = %d\n", a, b, g);<br>
+  return 0;<br>
+}<br>
+</section>
+    </p>
+  </article>
+</section>
+
+<section class="main-section" id="Constants">
+  <article>
+    <header>Constants </header>
+    <p>
+      You can use const prefix to declare constants with a specific type as follows −
+      const type variable = value;<br>
+      The following example explains it in detail -
+      <section class="code_part">
+      #include &lt;stdio.h&gt<br>
+
+      int main() {<br>
+         const int  LENGTH = 10;<br>
+         const int  WIDTH = 5;<br>
+         const char NEWLINE = '\n';<br>
+         int area;<br>
+
+         area = LENGTH * WIDTH;<br>
+         printf("value of area : %d", area);<br>
+         printf("%c", NEWLINE);<br>
+         return 0;<br>
+      }<br>
+</section>
+    </p>
+  </article>
+</section>
+
+<section class="main-section" id="Data_types">
+  <article>
+    <header>Data Types</header>
+    <p>
+      Each variable in C has an associated data type. Each data type requires different amounts of memory and has some specific operations which can be performed over it. Let us briefly describe them one by one:
+      <p>Following are the examples of some very common data types used in C:</p>
+      <ul style="list-style-type:square" >
+      <li>char: The most basic data type in C. It stores a single character and requires a single byte of memory in almost all compilers.</li>
+      <li>int: As the name suggests, an int variable is used to store an integer.</li>
+      <li>float: It is used to store decimal numbers (numbers with floating point value) with single precision.</li>
+      <li>double: It is used to store decimal numbers (numbers with floating point value) with double precision.</li>
+    </ul>
+      <p>Different data types also have different ranges upto which they can store numbers. These ranges may vary from compiler to compiler. Below is list of ranges along with the memory requirement and format specifiers on 32 bit gcc compiler.
+    </p>
+  </article>
+</section>
+
+<section class="main-section" id="if_else_statement">
+  <article>
+    <header>if...else statement</header>
+    <p>
+      An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.
+      <br>
+      Syntax<br>
+      The syntax of an if...else statement in C programming language is −</p>
+      <section class="code_part">
+      if(boolean_expression) {<br>
+         /* statement(s) will execute if the boolean expression is true */<br>
+      } else {<br>
+         /* statement(s) will execute if the boolean expression is false */<br>
+      }<br>
+    </section>
+      <p>If the Boolean expression evaluates to true, then the if block will be executed, otherwise, the else block will be executed.
+      <br>
+      C programming language assumes any non-zero and non-null values as true, and if it is either zero or null, then it is assumed as false value.
+    </p>
+  </article>
+</section>
+
+<section class="main-section" id="while_statement">
+  <article>
+    <header>while statement </header>
+    <p>A while loop in C programming repeatedly executes a target statement as long as a given condition is true.
+<br>
+Syntax<br>
+The syntax of a while loop in C programming language is −
+<section class="code_part">
+while(condition) {<br>
+   statement(s);<br>
+}<br>
+Here, statement(s) may be a single statement or a block of statements. The condition may be any expression, and true is any nonzero value. The loop iterates while the condition is true.
+<br>
+When the condition becomes false, the program control passes to the line immediately following the loop.
+</section>
+
+    </p>
+  </article>
+</section>
+
+<section class="main-section" id="Function_declarations">
+  <article>
+    <header>Function Declarations </header>
+    <p>A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.
+<br>
+A function declaration has the following parts −
+<br>
+
+<section class="code_part">
+return_type function_name( parameter list );
+</section>
+<p>
+For the above defined function max(), the function declaration is as follows −
+</p>
+<section class="code_part">
+int max(int num1, int num2);
+</section>
+<p>
+Parameter names are not important in function declaration only their type is required, so the following is also a valid declaration −
+</p>
+<section class="code_part">
+int max(int, int);
+</section>
+<p>
+Function declaration is required when you define a function in one source file and you call that function in another file. In such case, you should declare the function at the top of the file calling the function.
+</p>
+    </p>
+  </article>
+</section>
+
+<section class="main-section" id="Reference">
+  <article>
+    <header> Reference</header>
+    <p>
+      <ul style="list-style-type:square">
+        <li>All the documentation in this page is taken from <a href="https://www.tutorialspoint.com/cprogramming/index.htm" target="_blank">Tutorial Point</a></li>
+      </ul>
+    </p>
+  </article>
+</section>
+</main>
+</body>
+</html>
